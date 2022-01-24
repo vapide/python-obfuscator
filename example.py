@@ -4,6 +4,7 @@ filename = 'obfuscated'
 code = (
 '''
 input('hi')
+x = 5
 '''
 )
 
