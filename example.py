@@ -1,11 +1,12 @@
 import obfuscate
 
 filename = 'obfuscated'
+
 code = (
 '''
-input('hi')
-x = 5
+x="HELLO"
+print(x)
 '''
 )
 
-obfuscate.obfuscate(filename, code, clearvars = True)
+obfuscate.obfuscate(filename, code, compile = True, clearvars = True)
