@@ -113,4 +113,4 @@ def obfuscate(name, code, compile = False, clearvars = False, outputname = None)
 	return outputpath
 
 def obfuscatefile(path):
-	obfuscate(os.path.basename(path), readfile(path), compile = True, clearvars = True, outputname = os.path.basename(path))
+	obfuscate(os.path.basename(path), readfile(path), compile = True, clearvars = True, outputname = os.path.basename(path).replace('py', 'exe'))
