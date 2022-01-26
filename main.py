@@ -99,7 +99,7 @@ def obfuscate(name, code, compile = False, clearvars = False, outputname = None)
 			f.write(code)
 		py_compile.compile(filepath, cfile = outputpath)
 		shutil.rmtree(str(pathlib.Path(str(pathlib.Path(__file__).parent)+'/temp/')))
-		print(outputpath)
+		print('Obfuscated file path: ' + outputpath)
 	else:
 		if not os.path.exists(os.path.dirname(outputpath)):
 			try:
@@ -109,7 +109,7 @@ def obfuscate(name, code, compile = False, clearvars = False, outputname = None)
 					raise
 		with open(outputpath, "w") as f:
 			f.write(code)
-		print(outputpath)
+		print('Obfuscated file path: ' + outputpath)
 	return outputpath
 
 def obfuscatefile(path):
